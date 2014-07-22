@@ -23,7 +23,7 @@ function init() {
             $( "#startbtn" ).addClass("btn-primary");
         }
             $( "#startbtn" ).toggleClass("start");
-            $( "#startbtn" ).toggleClass("running");
+            
         
         function cycle() {
             count.setTime(count.getTime() - 1000);
@@ -42,8 +42,7 @@ function init() {
                 $( "#startbtn" ).removeClass("btn-danger");
                 $( "#startbtn" ).addClass("btn-primary");
                 $( "#startbtn" ).toggleClass("start");
-                $( "#startbtn" ).toggleClass("running");
-                console.log($( "#startbtn" ).hasClass("start"));
+                
             }
 
         }        
