@@ -1,0 +1,26 @@
+#container {
+    text-align: center;
+}
+#counter-container{
+    min-height: 100px;
+    padding: 20px 20px 0 20px;
+}
+#counter{
+    border: 1px solid black;
+    font-size: 80px;
+    padding: 40px;
+    font-family: 'Oswald', sans-serif;
+}
+#disclaimer{
+    margin: 40px;
+}
+h1{
+    color: red;
+}
+button{
+    margin: 20px 10px;
+}
+.glyphicon-registration-mark{
+    font-size: 14px;
+    vertical-align: super;
+}
