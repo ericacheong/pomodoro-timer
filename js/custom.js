@@ -17,7 +17,8 @@ function init() {
             count.setSeconds(0);
             count.setMinutes(25);
             clearTimeout(timer);
-            $( "#counter" ).text(count.toLocaleTimeString().slice(3));
+            //$( "#counter" ).text(count.toLocaleTimeString().slice(3));
+            displayCounter();
             $( "#startbtn").text("Start again");
             $( "#startbtn" ).removeClass("btn-danger");
             $( "#startbtn" ).addClass("btn-primary");
@@ -29,8 +30,8 @@ function init() {
             count.setTime(count.getTime() - 1000);
             
             // display to counter
-            $( "#counter" ).text(count.toLocaleTimeString().slice(3));
-                        
+            //$( "#counter" ).text(count.toLocaleTimeString().slice(3));
+            displayCounter();            
             if (count.getMinutes() > 0 || count.getSeconds() > 0) {
                 timer = setTimeout(function(){cycle()}, 1000);
                 $( "#startbtn").text("Stop");
@@ -44,7 +45,14 @@ function init() {
                 $( "#startbtn" ).toggleClass("start");
                 
             }
+        }
 
+        function displayCounter() {
+            var min = count.getMinutes();
+            var sec = count.getSeconds();
+            min = min > 9 ? min : "0" + min;
+            sec = sec > 9 ? sec : "0" + sec;
+            $( "#counter" ).text( min + ":" + sec);
         }        
     });    
 
